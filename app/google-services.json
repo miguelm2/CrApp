@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "988526078344",
+    "firebase_url": "https://crapp2-b1633.firebaseio.com",
+    "project_id": "crapp2-b1633",
+    "storage_bucket": "crapp2-b1633.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988526078344:android:1301169d99f1573a7db23d",
+        "android_client_info": {
+          "package_name": "com.miguelmartinez.crapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988526078344-vtpj3k7upc3b9skd08e2fouekbupvv8f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.miguelmartinez.crapp",
+            "certificate_hash": "9bf3c2ce766a08b8ffb1b202d190bbfbf86cc08e"
+          }
+        },
+        {
+          "client_id": "988526078344-853oe13qm65a9uch76njb0n91n4a0hfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhbU9rddLzFSv7JxsYVNyCqLeNjAg8lto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988526078344-853oe13qm65a9uch76njb0n91n4a0hfg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

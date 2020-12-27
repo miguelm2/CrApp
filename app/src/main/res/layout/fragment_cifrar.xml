@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/contenedor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:baselineAligned="false"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Des/Cifrar Archivos"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Seleccione un archivo para ser des/cifrado, se admite cualquier formato de archivo.!"
+            android:textAlignment="viewStart"
+            android:textColor="@color/letras"
+            android:textSize="15sp" />
+
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/seleccionar"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="0.06"
+            android:background="@color/rosado"
+            android:fontFamily="sans-serif-smallcaps"
+            android:singleLine="true"
+            android:text="Seleccione el Archivo"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Seleccione el algoritmo"
+            android:textAlignment="center"
+            android:textColor="@color/letras"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="181dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/colorLogin"
+            android:fadingEdge="horizontal"
+            android:soundEffectsEnabled="true"
+            android:spinnerMode="dialog"
+            android:textAlignment="center" />
+
+        <View
+            android:id="@+id/view10"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Ingrese una clave de 16 caracteres,se recomienda el uso de mayusculas, minuscuas y signos."
+            android:textColor="@color/letras"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="362dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/colorLogin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/claves"
+                android:layout_width="288dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.30"
+                android:background="@color/colorLogin"
+                android:ems="10"
+                android:fontFamily="sans-serif-smallcaps"
+                android:hint="Clave"
+                android:inputType="textPassword"
+                android:password="false"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/ver"
+                android:layout_width="33dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="7dp"
+                android:background="@drawable/ic_visibility_black_24dp"
+                android:backgroundTint="@android:color/white"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/nover"
+                android:layout_width="33dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="7dp"
+                android:background="@drawable/ic_visibility_off_black_24dp"
+                android:backgroundTint="@android:color/white"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/botonesClave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="1dp"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/bGenerar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:backgroundTint="?android:attr/colorPrimary"
+                android:fontFamily="sans-serif-condensed"
+                android:text=" Generar"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/Btn_CopiarClave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.06"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Copiar"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_PegarClave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Pegar"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view11"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/enc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/rosado"
+                android:drawableTop="@drawable/ic_lock_outline_black_24dp"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:text="Cifrar"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/descen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/rosado"
+                android:drawableTop="@drawable/ic_lock_open_black_24dp"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="onClick"
+                android:padding="8dp"
+                android:text="Descifrar"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

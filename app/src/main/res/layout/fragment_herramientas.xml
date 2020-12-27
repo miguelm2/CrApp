@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ContenedorTodo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top|center"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/contenedorBotones"
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="top|center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Cifrado de Texto"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:id="@+id/btnCesar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1.42"
+                    android:background="@color/rosado"
+                    android:checked="false"
+                    android:shadowRadius="10"
+                    android:text="ToggleButton"
+                    android:textColor="@android:color/white"
+                    android:textOff="Cifrado Cesar"
+                    android:textOn="Cifrado Cesar" />
+
+                <ToggleButton
+                    android:id="@+id/btnMostarXor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1.83"
+                    android:background="@color/rosado"
+                    android:checked="false"
+                    android:text="ToggleButton"
+                    android:textColor="@android:color/white"
+                    android:textOff="Cifrado XOR"
+                    android:textOn="Cifrado Xor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:id="@+id/btnMostrarMd5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_margin="6dp"
+                    android:layout_weight="0.75"
+                    android:background="@color/rosado"
+                    android:checked="false"
+                    android:text="ToggleButton"
+                    android:textColor="@android:color/white"
+                    android:textOff="Generar Hash"
+                    android:textOn="Generar Hash " />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contenedorMD5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/fondoCifrados"
+            android:gravity="top|center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Generador de Hash"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/entradaMD5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.31"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:hint="Ingrese texto"
+                android:inputType="none"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinnerHash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6.86" />
+
+                <Button
+                    android:id="@+id/btnCifrarMD5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1.94"
+                    android:background="@color/colorLogin"
+                    android:text="Generar"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btnCopiarHash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1.88"
+                    android:background="@color/colorLogin"
+                    android:text="Copiar"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/salidaMD5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="0.31"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:hint="Salida.."
+                android:inputType="textPersonName"
+                android:scrollbars="vertical"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contenedorCesar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/fondoCifrados"
+            android:gravity="top|center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Cifrado Cesar"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/textoCesar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="0.35"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Ingrese texto a cifrar"
+                android:inputType="textLongMessage"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/corrimiento"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Corrimiento"
+                    android:inputType="number"
+                    android:labelFor="@+id/sadas"
+                    android:text="3"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/cCesar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.12"
+                    android:background="@color/colorLogin"
+                    android:text="Cifrar"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/dCesar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.14"
+                    android:background="@color/colorLogin"
+                    android:text="Descifrar"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btnCopiarCesar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.15"
+                    android:background="@color/colorLogin"
+                    android:text="Copiar"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/cipherCesar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.34"
+                android:background="@android:color/white"
+                android:editable="false"
+                android:gravity="top"
+                android:hint="Texto cifrado..."
+                android:inputType="textPersonName"
+                android:scrollbars="vertical"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contenedorXOR"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fondoCifrados"
+            android:gravity="top|center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Cifrado XOR"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/textoXor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.38"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Ingrese texto a cifrar"
+                android:inputType="text"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/claveXor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.08"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:hint="Ingrese clave"
+                android:inputType="none"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCifrarXOR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1.94"
+                    android:background="@color/colorLogin"
+                    android:text="Cifrar"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btnDescifrarXor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1.94"
+                    android:background="@color/colorLogin"
+                    android:text="Descifrar"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1.88"
+                    android:background="@color/colorLogin"
+                    android:text="Copiar"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/cipherXOR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.40"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Salida..."
+                android:inputType="text"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

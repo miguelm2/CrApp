@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#256468</color>
+    <color name="colorPrimaryDark">#006064
+    </color>
+    <color name="colorLogin">#00838f</color>
+    <color name="colorAccent">#155c59</color>
+    <color name="rosado">#8a23a7</color>
+    <color name="fondoCifrados">#f0eeee</color>
+    <color name="fondoNose">#e5f8ea</color>
+    <color name="Exitoso">#07c81e</color>
+    <color name="fallo">#e50808</color>
+    <color name="letras">#2c2a2a</color>
+</resources>
